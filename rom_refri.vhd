@@ -4,13 +4,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity rom_refri is
     Port (
     address in : std_logic_Vector(7 downto 0);
-    content out: std_logic_Vector(27 downto 0)
+    data out: std_logic_Vector(19 downto 0)
     );
 end rom_refri;
 
 architecture  rom_refri of rom_refri is
 
-  type mem is array ( 0 to 2**4 - 1) of std_logic_vector(27 downto 0);
+  type mem is array ( 0 to 2**4 - 1) of std_logic_vector(19 downto 0);
      constant my_Rom : mem := (
        0  => "00000000000000100000",
        1  => "00011000000000010000",
@@ -30,7 +30,7 @@ architecture  rom_refri of rom_refri is
        15 => "01100000000000000000"
        );
 
-signal data : std_logic_vector (19 downto 0);
+
 
 begin
   process (address)
