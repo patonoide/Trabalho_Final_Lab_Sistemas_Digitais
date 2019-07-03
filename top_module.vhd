@@ -111,13 +111,13 @@ architecture top_module of top_module is
   signal clr_ou_clr_count : std_logic;
   signal s_igual_30 : std_logic;
   signal s_maior_30 : std_logic;
+  signal s_menor_30 : std_logic;
   signal SAIDA_CLR_CONT : std_logic;
   signal SAIDA_DEC_TROCO : std_logic;
   signal SAIDA_LOAD_CNT : std_logic;
   signal SAIDA_SOMAR : std_logic;
   signal SAIDA_MOEDA_BANDEJA : std_logic;
   signal SAIDA_REFRI_BANDEJA : std_logic;
-  signal s_menor_30 : std_logic;
   signal input4 : std_logic_vector(3 downto 0);
   signal input3 : std_logic_vector(3 downto 0);
 begin
