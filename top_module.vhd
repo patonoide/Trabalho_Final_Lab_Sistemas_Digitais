@@ -45,6 +45,53 @@ architecture top_module of top_module is
       );
   end component;
 
+  component decoMoeda is
+      Port ( COIN_IN : in STD_LOGIC_VECTOR (1 downto 0);
+             DECOIN_OUT : out STD_LOGIC_VECTOR (3 downto 0));
+  end component;
+
+  component deco7seg is
+      Generic (clk_freq : integer := 100000000; -- 100MHz
+               refresh_freq : integer := 30 -- 30Hz
+      );
+      Port ( clk_7seg : in STD_LOGIC;
+             rst : in std_logic;
+             input_1 : in STD_LOGIC_VECTOR (3 downto 0);
+             input_2 : in STD_LOGIC_VECTOR (3 downto 0);
+             input_3 : in STD_LOGIC_VECTOR (3 downto 0);
+             input_4 : in STD_LOGIC_VECTOR (3 downto 0);
+             output_7seg : out STD_LOGIC_VECTOR (6 downto 0);
+             output_an : out STD_LOGIC_VECTOR (3 downto 0));
+  end component;
+
+  component comp4bit is port(
+  	a, b : in std_logic_vector(3 downto 0);
+      agtbin, aeqbin, altbtin : in std_logic;
+      agtbout, aeqbout, altbtout : out std_logic);
+  end component;
+
+  component somador_reg is
+      Generic( n : integer := 4
+      );
+      Port ( clk : in STD_LOGIC;
+             clr : in STD_LOGIC;
+             en : in STD_LOGIC;
+             A : in STD_LOGIC_VECTOR (n-1 downto 0);
+             B : in STD_LOGIC_VECTOR (n-1 downto 0);
+             S : out STD_LOGIC_VECTOR (n-1 downto 0));
+  end component;
+
+  component contador_74LS169 is
+      Port ( clk : in STD_LOGIC;
+             clr : in STD_LOGIC;
+             ld : in STD_LOGIC;
+             en : in STD_LOGIC;
+             up_down : in STD_LOGIC;
+             D : in STD_LOGIC_VECTOR (3 downto 0);
+             o_f : out STD_LOGIC;
+             Q : out STD_LOGIC_VECTOR (3 downto 0));
+  end component;
+
   signal data_to_flag : std_logic;
   signal data_to_baddress : std_logic_vector(7 downto 0);
   signal data_to_opcode : std_logic_vector(2 downto 0);
@@ -71,7 +118,8 @@ architecture top_module of top_module is
   signal SAIDA_MOEDA_BANDEJA : std_logic;
   signal SAIDA_REFRI_BANDEJA : std_logic;
   signal s_menor_30 : std_logic;
-
+  signal input4 : std_logic_vector(3 downto 0);
+  signal input3 : std_logic_vector(3 downto 0);
 begin
 
   moeda : decoMoeda port map (COIN_IN => COIN_IN,
@@ -96,19 +144,19 @@ begin
                                                    );
 
        comparador : comp4bit port map (aeqbin => '1',
-                                     altbtin => '0',
-                                         agtbin => '0',
-                                         A => saida_contador,
-                                         B => "0110",
-                                     aeqbout => s_igual_30,
-                                   agtbout => s_maior_30,
-                                   altbtout => s_menor_30
+                                       altbtin => '0',
+                                       agtbin => '0',
+                                       A => saida_contador,
+                                       B => "0110",
+                                       aeqbout => s_igual_30,
+                                       agtbout => s_maior_30,
+                                       altbtout => s_menor_30
                                          );
 
     display7seg : deco7seg port map (input_1 => saida_contador,
                                      input_2 => "0110",
                                      input_3 => "0000",
-                                     input_4 => "0000",
+                                     input_4 => input4,
                                      clk_7seg => clk,
                                      rst => clr
                                          );
@@ -120,7 +168,8 @@ begin
   flag => saida_mux,
   braddr => data_to_baddress,
   jaddr => data_to_jaddr,
-  opcode => data_to_opcode
+  opcode => data_to_opcode,
+  Q =>Q_to_Address
   );
 
   rom : rom_refri port map(
@@ -150,5 +199,8 @@ begin
 
   dec_troco_ou_load_cont <= SAIDA_LOAD_CNT or SAIDA_DEC_TROCO;
   clr_ou_clr_count <= clr or SAIDA_CLR_CONT;
+
+  input3 <= Q_to_Address(3 downto 0);
+  input4 <= '0' & data_to_opcode;
 
 end architecture;
