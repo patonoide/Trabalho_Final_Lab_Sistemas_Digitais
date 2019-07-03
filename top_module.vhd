@@ -23,13 +23,13 @@ end entity;
 architecture top_module of top_module is
 
   component myca2 is
-      Port ( clk : in STD_LOGIC;
-             clr : in STD_LOGIC;
-             flag : in STD_LOGIC;
-             braddr : in STD_LOGIC_VECTOR (7 downto 0);
-             opcode : in STD_LOGIC_VECTOR (3 downto 0);
-             jaddr : in STD_LOGIC_VECTOR (7 downto 0);
-             Q : out STD_LOGIC_VECTOR (7 downto 0));
+       Port ( clk : in STD_LOGIC;
+           clr : in STD_LOGIC;
+           flag : in STD_LOGIC;
+           braddr : in STD_LOGIC_VECTOR (7 downto 0);
+           opcode : in STD_LOGIC_VECTOR (2 downto 0);
+           jaddr : in STD_LOGIC_VECTOR (7 downto 0);
+           Q : out STD_LOGIC_VECTOR (7 downto 0));
   end component;
 
   component rom_refri is
@@ -53,7 +53,7 @@ architecture top_module of top_module is
 
   signal data_to_flag : std_logic;
   signal data_to_baddress : std_logic_vector(7 downto 0);
-  signal data_to_opcode : std_logic_vector(3 downto 0);
+  signal data_to_opcode : std_logic_vector(2 downto 0);
   signal Q_to_Address : std_logic_vector(7 downto 0);
   signal data_to_jaddr : std_logic_vector(7 downto 0);
   signal saida_rom : std_logic_vector(19 downto 0);
@@ -87,7 +87,7 @@ begin
   Y => saida_mux
   );
 
-  data_to_opcode <= '0' & saida_rom(19 downto 17);
+  data_to_opcode <= saida_rom(19 downto 17);
   data_to_mux_adrress_selector <= saida_rom(16 downto 14);
   data_to_baddress <= saida_rom(13 downto 6);
   data_to_saida <= saida_rom(5 downto 0);
