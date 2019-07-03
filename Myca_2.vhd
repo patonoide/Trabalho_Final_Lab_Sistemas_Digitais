@@ -14,7 +14,8 @@ end myca2;
 architecture Behavioral of myca2 is
 
 signal ld, en : std_logic;
-signal deco_out, P, f, C :  std_logic_Vector (7 downto 0);
+signal deco_out: STD_LOGIC_VECTOR (6 downto 0);
+signal P, f, C :  std_logic_Vector (7 downto 0);
 signal D0, D1, D2, D3: STD_LOGIC_VECTOR (7 downto 0);
 signal Smux: STD_LOGIC_VECTOR (1 downto 0);
 signal Ymux: STD_LOGIC_VECTOR (7 downto 0);
@@ -27,7 +28,7 @@ contador: entity work.C74LS169 port map(
     ld => deco_out(5),
     en => deco_out(6),
     ud => '1',
-    D => braddr,
+    D => Ymux,
     oof => open,
     C => C
 );
@@ -57,7 +58,7 @@ opdecode: entity work.opcode_decoder port map(
 );
 Smux <= deco_out(4) & deco_out(3); 
 
-mux: process(Smux)
+mux: process(Smux, braddr, jaddr, P)
 begin
     case Smux is
     when "00" => Ymux <= braddr;
