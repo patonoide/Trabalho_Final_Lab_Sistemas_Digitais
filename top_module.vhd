@@ -192,7 +192,8 @@ begin
   data_to_baddress <= saida_rom(13 downto 6);
   data_to_saida <= saida_rom(5 downto 0);
 
-  entrada_mux <= MOEDA_ACK & s_menor_30 & s_maior_30 & s_igual_30 & REFRI_RET & MOEDA_RET & not MOEDA_ACK & '0';
+  --entrada_mux <= MOEDA_ACK & s_menor_30 & s_maior_30 & s_igual_30 & REFRI_RET & MOEDA_RET & not MOEDA_ACK & '0';
+  entrada_mux <= '0' & not MOEDA_ACK & MOEDA_RET & REFRI_RET & s_igual_30 & s_maior_30 & s_menor_30 & MOEDA_ACK;
 
   SAIDA_SOMAR <= data_to_saida(5);
   SAIDA_LOAD_CNT <= data_to_saida(4);
