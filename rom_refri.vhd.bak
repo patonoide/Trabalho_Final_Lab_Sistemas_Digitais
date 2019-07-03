@@ -3,8 +3,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity rom_refri is
     Port (
-    address  : in std_logic_Vector(7 downto 0);
-    data : out std_logic_Vector(19 downto 0)
+    address in : std_logic_Vector(7 downto 0);
+    data out: std_logic_Vector(19 downto 0)
     );
 end rom_refri;
 
