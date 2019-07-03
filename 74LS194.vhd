@@ -20,11 +20,11 @@ architecture  deslocador of D74LS194 is
 
     signal flip : std_logic_vector (7 downto 0);
 begin
-    process(clr,S,R,D,L, clk)
+    process(clr,S,R,D,L, clk, flip)
     begin
         if rising_edge(clk) then
             if clr = '0' then
-                flip <= "0000";
+                flip <= "00000000";
             end if;
             if clr = '1' and S = "00" then
                 flip <= flip;
@@ -39,7 +39,7 @@ begin
                 flip <= flip(6) & flip(5) & flip(4) & flip(3) & flip(2) & flip(1) & flip(0) & '0' ;
             end if;
             if clr = '1' and S = "10" and L = '1' then
-                flip <= flip(6) & flip(5) & flip(4) & flip(2) & flip(1) & flip(0) & '1' ;
+                flip <= flip(6) & flip(5) & flip(4) & flip(3) & flip(2) & flip(1) & flip(0) & '1' ;
             end if;
             if clr = '1' and S = "11" then
                 flip <= D;
@@ -54,3 +54,4 @@ begin
 
 
 end architecture;
+

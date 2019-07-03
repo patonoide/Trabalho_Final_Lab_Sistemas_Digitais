@@ -7,19 +7,19 @@ entity nbit_adder is
     Port ( a : in STD_LOGIC_VECTOR (n-1 downto 0);
            b : in STD_LOGIC_VECTOR (n-1 downto 0);
            cin : in STD_LOGIC;
-           f : out STD_LOGIC_VECTOR (n downto 0)); -- a soma de dois numeros sem sinal (unsigned) 
+           f : out STD_LOGIC_VECTOR (n-1 downto 0)); -- a soma de dois numeros sem sinal (unsigned) 
                                                    -- de n-1 bits da um numero de n bits
 end nbit_adder;
 
 architecture Behavioral of nbit_adder is
 
--- o sinal deve ser inicializado em 0 para não ter erros
+-- o sinal deve ser inicializado em 0 para nÃ£o ter erros
 signal c_intermediario : std_logic_Vector (n downto 0) := (others=>'0'); 
 
 begin
 
 c_intermediario(0) <= cin;
-f(n) <= c_intermediario(n);
+f(n-1) <= c_intermediario(n-1);
 
 for_label : for i in 0 to n-1 generate
     somador: entity work.Adder_1bit port map(

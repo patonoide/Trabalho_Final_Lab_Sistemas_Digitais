@@ -21,11 +21,11 @@ architecture  implem of C74LS169 is
 
     signal flip : std_logic_vector (7 downto 0);
 begin
-    process(clr, en,ld, clk, ud, D)
+    process(clr, en,ld, clk, ud, D, flip)
     begin
         if rising_edge(clk) then
             if clr = '1'  then
-                flip <= "0000";
+                flip <= "00000000";
                 oof <= '0';
                 
             elsif en = '0'  then
@@ -36,13 +36,13 @@ begin
                 flip <= D;
                 oof <= '0';
                 
-            elsif en = '1' and ud = '0' and flip = "0000" then
+            elsif en = '1' and ud = '0' and flip = "00000000" then
                 oof <= '1';
-                flip <= "1111";
+                flip <= "11111111";
                 
-            elsif en = '1' and ud = '1' and flip = "1111" then
+            elsif en = '1' and ud = '1' and flip = "11111111" then
                 oof <= '1';
-                flip <="0000";
+                flip <="00000000";
                 
             elsif en = '1' and ud = '0' then
                 oof <= '0';
@@ -62,3 +62,4 @@ begin
 
 
 end architecture;
+
