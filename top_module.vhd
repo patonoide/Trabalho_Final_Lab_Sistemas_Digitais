@@ -118,7 +118,7 @@ architecture top_module of top_module is
   signal SAIDA_SOMAR : std_logic;
   signal SAIDA_MOEDA_BANDEJA : std_logic;
   signal SAIDA_REFRI_BANDEJA : std_logic;
-  signal input4 : std_logic_vector(3 downto 0);
+  signal input2 : std_logic_vector(3 downto 0);
   signal input3 : std_logic_vector(3 downto 0);
 begin
 
@@ -136,11 +136,11 @@ begin
 
   contador: contador_74LS169 port map (clk => clk,
                                        D => saida_somador,
-                                        ld => SAIDA_LOAD_CNT,
-                                          en => dec_troco_ou_load_cont,
-                                          clr => clr_ou_clr_count,
-                                           Q => saida_contador,
-                                         up_down => '0'
+                                       ld => SAIDA_LOAD_CNT,
+                                       en => dec_troco_ou_load_cont,
+                                       clr => clr_ou_clr_count,
+                                       Q => saida_contador,
+                                       up_down => '0'
                                                    );
 
        comparador : comp4bit port map (aeqbin => '1',
@@ -153,10 +153,10 @@ begin
                                        altbtout => s_menor_30
                                          );
 
-    display7seg : deco7seg port map (input_1 => saida_contador,
-                                     input_2 => "0110",
-                                     input_3 => "0000",
-                                     input_4 => input4,
+    display7seg : deco7seg port map (input_1 => "0110",
+                                     input_2 => input2,
+                                     input_3 => input3,
+                                     input_4 => saida_contador,
                                      clk_7seg => clk,
                                      rst => clr
                                          );
@@ -203,7 +203,7 @@ begin
   drop_pop <= SAIDA_REFRI_BANDEJA;
   return_nickel <= SAIDA_MOEDA_BANDEJA;
 
-  input3 <= Q_to_Address(3 downto 0);
-  input4 <= '0' & data_to_opcode;
+  input2 <= Q_to_Address(3 downto 0);
+  input3 <= '0' & data_to_opcode;
 
 end architecture;
