@@ -3,20 +3,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity top_module is
   port (
-  clk : in std_logic;
+  clk :in std_logic;
   clr : in std_logic;
-  coin_present : in std_logic;
-  smenor30 : in std_logic;
-  smaior30 : in std_logic;
-  sigual30 : in std_logic;
-  pop_drop_ready : in std_logic;
-  changer_ready : in std_logic;
-  soma : out std_logic;
-  load_count : out std_logic;
-  clr_cont : out std_logic;
-  dec_troco : out std_logic;
-  moeda_em_bandeja : out std_logic;
-  refri_em_bandeja : out std_logic
+  COIN_IN : in std_logic_vector(1 downto 0);
+  REFRI_RET : in std_logic;
+  MOEDA_ACK : in std_logic;
+  MOEDA_RET : in std_logic;
+  return_nickel : out std_logic;
+  drop_pop : out std_logic
   );
 end entity;
 
@@ -63,9 +57,62 @@ architecture top_module of top_module is
   signal saida_mux : std_logic;
   signal data_to_saida : std_logic_vector(5 downto 0);
 
-
+  signal saida_moeda : std_logic_vector (3 downto 0);
+  signal saida_contador : std_logic_vector(3 downto 0);
+  signal saida_somador : std_logic_vector(3 downto 0);
+  signal dec_troco_ou_load_cont : std_logic;
+  signal clr_ou_clr_count : std_logic;
+  signal s_igual_30 : std_logic;
+  signal s_maior_30 : std_logic;
+  signal SAIDA_CLR_CONT : std_logic;
+  signal SAIDA_DEC_TROCO : std_logic;
+  signal SAIDA_LOAD_CNT : std_logic;
+  signal SAIDA_SOMAR : std_logic;
+  signal SAIDA_MOEDA_BANDEJA : std_logic;
+  signal SAIDA_REFRI_BANDEJA : std_logic;
+  signal s_menor_30 : std_logic;
 
 begin
+
+  moeda : decoMoeda port map (COIN_IN => COIN_IN,
+                              DECOIN_OUT => saida_moeda
+                              );
+
+  somador : somador_reg port map (clk => clk,
+                                  en => SAIDA_SOMAR,
+                                  clr => clr,
+                                  A => saida_moeda,
+                                  B => saida_contador,
+                                  S => saida_somador
+                                  );
+
+  contador: contador_74LS169 port map (clk => clk,
+                                       D => saida_somador,
+                                        ld => SAIDA_LOAD_CNT,
+                                          en => dec_troco_ou_load_cont,
+                                          clr => clr_ou_clr_count,
+                                           Q => saida_contador,
+                                         up_down => '0'
+                                                   );
+
+       comparador : comp4bit port map (aeqbin => '1',
+                                     altbtin => '0',
+                                         agtbin => '0',
+                                         A => saida_contador,
+                                         B => "0110",
+                                     aeqbout => s_igual_30,
+                                   agtbout => s_maior_30,
+                                   altbtout => s_menor_30
+                                         );
+
+    display7seg : deco7seg port map (input_1 => saida_contador,
+                                     input_2 => "0110",
+                                     input_3 => "0000",
+                                     input_4 => "0000",
+                                     clk_7seg => clk,
+                                     rst => clr
+                                         );
+
 
   myca2_use : myca2 port map (
   clk => clk,
@@ -92,15 +139,16 @@ begin
   data_to_baddress <= saida_rom(13 downto 6);
   data_to_saida <= saida_rom(5 downto 0);
 
-  entrada_mux <= coin_present & smenor30 & smaior30 & sigual30 & pop_drop_ready & changer_ready & not coin_present & '0';
+  entrada_mux <= MOEDA_ACK & s_menor_30 & s_maior_30 & s_igual_30 & REFRI_RET & MOEDA_RET & not MOEDA_ACK & '0';
 
-  soma <= data_to_saida(5);
-  load_count <= data_to_saida(4);
-  clr_cont <= data_to_saida(3);
-  moeda_em_bandeja <= data_to_saida(2);
-  dec_troco <= data_to_saida(1);
-  refri_em_bandeja <= data_to_saida(0);
+  SAIDA_SOMAR <= data_to_saida(5);
+  SAIDA_LOAD_CNT <= data_to_saida(4);
+  SAIDA_CLR_CONT <= data_to_saida(3);
+  SAIDA_MOEDA_BANDEJA <= data_to_saida(2);
+  SAIDA_DEC_TROCO <= data_to_saida(1);
+  SAIDA_REFRI_BANDEJA <= data_to_saida(0);
 
-
+  dec_troco_ou_load_cont <= SAIDA_LOAD_CNT or SAIDA_DEC_TROCO;
+  clr_ou_clr_count <= clr or SAIDA_CLR_CONT;
 
 end architecture;
