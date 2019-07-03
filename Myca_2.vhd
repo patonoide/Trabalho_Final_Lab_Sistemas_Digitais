@@ -6,7 +6,7 @@ entity myca2 is
            clr : in STD_LOGIC;
            flag : in STD_LOGIC;
            braddr : in STD_LOGIC_VECTOR (7 downto 0);
-           opcode : in STD_LOGIC_VECTOR (3 downto 0);
+           opcode : in STD_LOGIC_VECTOR (2 downto 0);
            jaddr : in STD_LOGIC_VECTOR (7 downto 0);
            Q : out STD_LOGIC_VECTOR (7 downto 0));
 end myca2;
