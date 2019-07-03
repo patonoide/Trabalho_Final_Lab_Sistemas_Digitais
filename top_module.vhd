@@ -10,7 +10,9 @@ entity top_module is
   MOEDA_ACK : in std_logic;
   MOEDA_RET : in std_logic;
   return_nickel : out std_logic;
-  drop_pop : out std_logic
+  drop_pop : out std_logic;
+  output_7seg : out STD_LOGIC_VECTOR (6 downto 0);
+  output_an : out STD_LOGIC_VECTOR (3 downto 0)
   );
 end entity;
 
@@ -158,7 +160,9 @@ begin
                                      input_3 => input3,
                                      input_4 => saida_contador,
                                      clk_7seg => clk,
-                                     rst => clr
+                                     rst => clr,
+                                     output_7seg => output_7seg,
+                                     output_an => output_an
                                          );
 
 
