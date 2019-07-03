@@ -200,6 +200,9 @@ begin
   dec_troco_ou_load_cont <= SAIDA_LOAD_CNT or SAIDA_DEC_TROCO;
   clr_ou_clr_count <= clr or SAIDA_CLR_CONT;
 
+  drop_pop <= SAIDA_REFRI_BANDEJA;
+  return_nickel <= SAIDA_MOEDA_BANDEJA;
+
   input3 <= Q_to_Address(3 downto 0);
   input4 <= '0' & data_to_opcode;
 
