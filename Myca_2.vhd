@@ -58,12 +58,12 @@ opdecode: entity work.opcode_decoder port map(
 );
 Smux <= deco_out(4) & deco_out(3); 
 
-mux: process(Smux, braddr, jaddr, P)
+mux: process(Smux, braddr, jaddr, P, D2)
 begin
     case Smux is
     when "00" => Ymux <= braddr;
     when "01" => Ymux <= jaddr;
-    when "10" => Ymux <= P;
+    when "10" => Ymux <= D2;
     when "11" => Ymux <= "00000000";
     when others =>  Ymux <= "00000000";
     end case;
