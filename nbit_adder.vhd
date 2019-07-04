@@ -13,7 +13,7 @@ end nbit_adder;
 
 architecture Behavioral of nbit_adder is
 
--- o sinal deve ser inicializado em 0 para nÃ£o ter erros
+-- o sinal deve ser inicializado em 0 para não ter erros
 signal c_intermediario : std_logic_Vector (n downto 0) := (others=>'0'); 
 
 begin
