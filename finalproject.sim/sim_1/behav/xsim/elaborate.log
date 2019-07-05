@@ -1,0 +1,31 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto e7969d2772764c7d90adff8a62adcac4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulator_behav xil_defaultlib.simulator -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.decoMoeda [decomoeda_default]
+Compiling architecture behavioral of entity xil_defaultlib.somador_reg [somador_reg_default]
+Compiling architecture behavioral of entity xil_defaultlib.contador_74LS169 [contador_74ls169_default]
+Compiling architecture rtl of entity xil_defaultlib.comp1bit [comp1bit_default]
+Compiling architecture rtl of entity xil_defaultlib.comp4bit [comp4bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.deco7seg [deco7seg_default]
+Compiling architecture implem of entity xil_defaultlib.C74LS169 [c74ls169_default]
+Compiling architecture deslocador of entity xil_defaultlib.D74LS194 [d74ls194_default]
+Compiling architecture impleme of entity xil_defaultlib.pilha [pilha_default]
+Compiling architecture behavioral of entity xil_defaultlib.Adder_1bit [adder_1bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.nbit_adder [nbit_adder_default]
+Compiling architecture behavioral of entity xil_defaultlib.opcode_decoder [opcode_decoder_default]
+Compiling architecture behavioral of entity xil_defaultlib.myca2 [myca2_default]
+Compiling architecture rom_refri of entity xil_defaultlib.rom_refri [rom_refri_default]
+Compiling architecture mux8 of entity xil_defaultlib.mux8 [mux8_default]
+Compiling architecture top_module of entity xil_defaultlib.top_module [top_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.simulator
+Built simulation snapshot simulator_behav

@@ -1,0 +1,22 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+C:/Users/Neris/finalproject/finalproject.srcs/sim_1/imports/Documents/simulator.vhd,1562248694,vhdl,,,,simulator,,,,,,,,
+C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/imports/Neris/contadorUP_DOWN/contadorUP_DOWN.srcs/sources_1/imports/pergunta3/updown.vhd,1562255756,vhdl,C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/new/Myca_2.vhd,,,c74ls169,,,,,,,,
+C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/imports/Neris/pilha/pilha.srcs/sources_1/imports/experimento5/pergunta1/74LS194.vhd,1562127817,vhdl,,,,d74ls194,,,,,,,,
+C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/imports/Neris/pilha/pilha.srcs/sources_1/imports/experimento5/pergunta2/pilha.vhd,1562007018,vhdl,C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/new/Myca_2.vhd,,,pilha,,,,,,,,
+C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/imports/adder/1bit_Adder.vhd,1556986637,vhdl,C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/imports/adder/nbit_adder.vhd,,,adder_1bit,,,,,,,,
+C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/imports/adder/nbit_adder.vhd,1562127117,vhdl,C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/new/Myca_2.vhd,,,nbit_adder,,,,,,,,
+C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/new/Myca_2.vhd,1562255522,vhdl,,,,myca2,,,,,,,,
+C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/new/ROM.vhd,1562190527,vhdl,,,,rom_refri,,,,,,,,
+C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/new/mux3_8.vhd,1562252579,vhdl,,,,mux8,,,,,,,,
+C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/new/opcode_decoder.vhd,1562004854,vhdl,C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/new/Myca_2.vhd,,,opcode_decoder,,,,,,,,
+C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/74LS169.vhd,1562184264,vhdl,,,,contador_74ls169,,,,,,,,
+C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/comparador1bits.vhd,1559619262,vhdl,C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/comparador4bits.vhd,,,comp1bit,,,,,,,,
+C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/comparador4bits.vhd,1562253624,vhdl,,,,comp4bit,,,,,,,,
+C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/deco_moeda.vhd,1562249008,vhdl,,,,decomoeda,,,,,,,,
+C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/decode7segmento.vhd,1562249130,vhdl,,,,deco7seg,,,,,,,,
+C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/somador.vhd,1562181871,vhdl,,,,somador_reg,,,,,,,,
+C:/Users/Neris/finalproject/finalproject.srcs/sources_1/new/somador4.vhd,1562181682,vhdl,,,,,,,,,,,,
+C:/Users/Neris/finalproject/finalproject.srcs/sources_1/new/topmodule.vhd,1562255962,vhdl,C:/Users/Neris/finalproject/finalproject.srcs/sim_1/imports/Documents/simulator.vhd,,,top_module,,,,,,,,

@@ -1,0 +1,447 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Jul  4 13:14:20 2019
+# Process ID: 7948
+# Current directory: C:/Users/Neris/finalproject/finalproject.runs/synth_1
+# Command line: vivado.exe -log top_module.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_module.tcl
+# Log file: C:/Users/Neris/finalproject/finalproject.runs/synth_1/top_module.vds
+# Journal file: C:/Users/Neris/finalproject/finalproject.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top_module.tcl -notrace
+Command: synth_design -top top_module -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9636 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 363.543 ; gain = 101.055
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_module' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/new/topmodule.vhd:19]
+INFO: [Synth 8-3491] module 'decoMoeda' declared at 'C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/deco_moeda.vhd:34' bound to instance 'moeda' of component 'decoMoeda' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/new/topmodule.vhd:128]
+INFO: [Synth 8-638] synthesizing module 'decoMoeda' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/deco_moeda.vhd:39]
+INFO: [Synth 8-226] default block is never used [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/deco_moeda.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'decoMoeda' (1#1) [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/deco_moeda.vhd:39]
+	Parameter n bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'somador_reg' declared at 'C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/somador.vhd:5' bound to instance 'somador' of component 'somador_reg' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/new/topmodule.vhd:132]
+INFO: [Synth 8-638] synthesizing module 'somador_reg' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/somador.vhd:16]
+	Parameter n bound to: 4 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element a_var_reg was removed.  [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/somador.vhd:25]
+WARNING: [Synth 8-6014] Unused sequential element b_var_reg was removed.  [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/somador.vhd:26]
+INFO: [Synth 8-4471] merging register 'S_reg[3:0]' into 's_var_reg[3:0]' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/somador.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element S_reg was removed.  [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/somador.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'somador_reg' (2#1) [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/somador.vhd:16]
+INFO: [Synth 8-3491] module 'contador_74LS169' declared at 'C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/74LS169.vhd:13' bound to instance 'contador' of component 'contador_74LS169' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/new/topmodule.vhd:140]
+INFO: [Synth 8-638] synthesizing module 'contador_74LS169' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/74LS169.vhd:24]
+INFO: [Synth 8-4471] merging register 'Q_reg[3:0]' into 'Q_var_reg[3:0]' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/74LS169.vhd:47]
+WARNING: [Synth 8-6014] Unused sequential element Q_reg was removed.  [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/74LS169.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'contador_74LS169' (3#1) [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/74LS169.vhd:24]
+INFO: [Synth 8-3491] module 'comp4bit' declared at 'C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/comparador4bits.vhd:4' bound to instance 'comparador' of component 'comp4bit' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/new/topmodule.vhd:149]
+INFO: [Synth 8-638] synthesizing module 'comp4bit' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/comparador4bits.vhd:10]
+INFO: [Synth 8-638] synthesizing module 'comp1bit' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/comparador1bits.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'comp1bit' (4#1) [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/comparador1bits.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'comp4bit' (5#1) [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/comparador4bits.vhd:10]
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter refresh_freq bound to: 30 - type: integer 
+INFO: [Synth 8-3491] module 'deco7seg' declared at 'C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/decode7segmento.vhd:5' bound to instance 'display7seg' of component 'deco7seg' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/new/topmodule.vhd:159]
+INFO: [Synth 8-638] synthesizing module 'deco7seg' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/decode7segmento.vhd:19]
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter refresh_freq bound to: 30 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/decode7segmento.vhd:31]
+INFO: [Synth 8-226] default block is never used [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/decode7segmento.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'deco7seg' (6#1) [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/decode7segmento.vhd:19]
+INFO: [Synth 8-3491] module 'myca2' declared at 'C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/new/Myca_2.vhd:4' bound to instance 'myca2_use' of component 'myca2' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/new/topmodule.vhd:170]
+INFO: [Synth 8-638] synthesizing module 'myca2' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/new/Myca_2.vhd:14]
+INFO: [Synth 8-638] synthesizing module 'C74LS169' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/imports/Neris/contadorUP_DOWN/contadorUP_DOWN.srcs/sources_1/imports/pergunta3/updown.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'C74LS169' (7#1) [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/imports/Neris/contadorUP_DOWN/contadorUP_DOWN.srcs/sources_1/imports/pergunta3/updown.vhd:20]
+INFO: [Synth 8-638] synthesizing module 'stack_nbit' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Documents/stack_nbit.vhd:18]
+	Parameter n bound to: 8 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'shifter_74LS174' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Documents/shifter_74LS174.vhd:20]
+	Parameter n bound to: 8 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Documents/shifter_74LS174.vhd:30]
+INFO: [Synth 8-4471] merging register 'P_reg[7:0]' into 'Q_var_reg[7:0]' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Documents/shifter_74LS174.vhd:39]
+WARNING: [Synth 8-6014] Unused sequential element P_reg was removed.  [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Documents/shifter_74LS174.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'shifter_74LS174' (8#1) [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Documents/shifter_74LS174.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'stack_nbit' (9#1) [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Documents/stack_nbit.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'nbit_adder' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/imports/adder/nbit_adder.vhd:14]
+	Parameter n bound to: 8 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Adder_1bit' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/imports/adder/1bit_Adder.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'Adder_1bit' (10#1) [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/imports/adder/1bit_Adder.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'nbit_adder' (11#1) [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/imports/adder/nbit_adder.vhd:14]
+INFO: [Synth 8-638] synthesizing module 'opcode_decoder' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/new/opcode_decoder.vhd:9]
+INFO: [Synth 8-226] default block is never used [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/new/opcode_decoder.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'opcode_decoder' (12#1) [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/new/opcode_decoder.vhd:9]
+INFO: [Synth 8-226] default block is never used [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/new/Myca_2.vhd:67]
+INFO: [Synth 8-256] done synthesizing module 'myca2' (13#1) [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/new/Myca_2.vhd:14]
+INFO: [Synth 8-3491] module 'rom_refri' declared at 'C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/new/ROM.vhd:4' bound to instance 'rom' of component 'rom_refri' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/new/topmodule.vhd:180]
+INFO: [Synth 8-638] synthesizing module 'rom_refri' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/new/ROM.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'rom_refri' (14#1) [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/new/ROM.vhd:11]
+INFO: [Synth 8-3491] module 'mux8' declared at 'C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/new/mux3_8.vhd:5' bound to instance 'muxbranch' of component 'mux8' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/new/topmodule.vhd:185]
+INFO: [Synth 8-638] synthesizing module 'mux8' [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/new/mux3_8.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'mux8' (15#1) [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/new/mux3_8.vhd:18]
+WARNING: [Synth 8-3848] Net data_to_jaddr in module/entity top_module does not have driver. [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/new/topmodule.vhd:101]
+INFO: [Synth 8-256] done synthesizing module 'top_module' (16#1) [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/new/topmodule.vhd:19]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 420.398 ; gain = 157.910
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin myca2_use:jaddr[7] to constant 0 [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/new/topmodule.vhd:170]
+WARNING: [Synth 8-3295] tying undriven pin myca2_use:jaddr[6] to constant 0 [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/new/topmodule.vhd:170]
+WARNING: [Synth 8-3295] tying undriven pin myca2_use:jaddr[5] to constant 0 [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/new/topmodule.vhd:170]
+WARNING: [Synth 8-3295] tying undriven pin myca2_use:jaddr[4] to constant 0 [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/new/topmodule.vhd:170]
+WARNING: [Synth 8-3295] tying undriven pin myca2_use:jaddr[3] to constant 0 [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/new/topmodule.vhd:170]
+WARNING: [Synth 8-3295] tying undriven pin myca2_use:jaddr[2] to constant 0 [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/new/topmodule.vhd:170]
+WARNING: [Synth 8-3295] tying undriven pin myca2_use:jaddr[1] to constant 0 [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/new/topmodule.vhd:170]
+WARNING: [Synth 8-3295] tying undriven pin myca2_use:jaddr[0] to constant 0 [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/new/topmodule.vhd:170]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 420.398 ; gain = 157.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 420.398 ; gain = 157.910
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Neris/finalproject/finalproject.srcs/constrs_1/imports/experimento6/pins.xdc]
+Finished Parsing XDC File [C:/Users/Neris/finalproject/finalproject.srcs/constrs_1/imports/experimento6/pins.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Neris/finalproject/finalproject.srcs/constrs_1/imports/experimento6/pins.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_module_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_module_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 752.852 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 752.852 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 752.852 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 752.852 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 752.852 ; gain = 490.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 752.852 ; gain = 490.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 752.852 ; gain = 490.363
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/soda/soda.srcs/sources_1/imports/experimento6/74LS169.vhd:37]
+INFO: [Synth 8-5544] ROM "o_f" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "o_f" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Neris/finalproject/finalproject.srcs/sources_1/imports/Neris/myca_2/myca_2.srcs/sources_1/imports/Neris/contadorUP_DOWN/contadorUP_DOWN.srcs/sources_1/imports/pergunta3/updown.vhd:27]
+INFO: [Synth 8-5546] ROM "data" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 752.852 ; gain = 490.363
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 20    
++---Registers : 
+	                8 Bit    Registers := 9     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     20 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   4 Input      8 Bit        Muxes := 9     
+	  16 Input      7 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   5 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module decoMoeda 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+Module somador_reg 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+Module contador_74LS169 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module comp1bit 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module deco7seg 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module C74LS169 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 6     
+	   5 Input      1 Bit        Muxes := 1     
+Module shifter_74LS174 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module Adder_1bit 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
+Module opcode_decoder 
+Detailed RTL Component Info : 
++---Muxes : 
+	  16 Input      7 Bit        Muxes := 1     
+Module myca2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+Module rom_refri 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     20 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5544] ROM "contador/o_f" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "contador/o_f" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 752.852 ; gain = 490.363
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 752.852 ; gain = 490.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_0/i_455/O'
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 772.258 ; gain = 509.770
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 776.113 ; gain = 513.625
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 776.113 ; gain = 513.625
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 776.113 ; gain = 513.625
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 776.113 ; gain = 513.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 776.113 ; gain = 513.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 776.113 ; gain = 513.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 776.113 ; gain = 513.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    22|
+|3     |LUT1   |     2|
+|4     |LUT2   |    43|
+|5     |LUT3   |    16|
+|6     |LUT4   |     7|
+|7     |LUT5   |    18|
+|8     |LUT6   |    45|
+|9     |FDRE   |    58|
+|10    |IBUF   |     7|
+|11    |OBUF   |    13|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------------------+-----------------+------+
+|      |Instance                       |Module           |Cells |
++------+-------------------------------+-----------------+------+
+|1     |top                            |                 |   232|
+|2     |  contador                     |contador_74LS169 |    30|
+|3     |  display7seg                  |deco7seg         |    92|
+|4     |  myca2_use                    |myca2            |    84|
+|5     |    contador                   |C74LS169         |    69|
+|6     |    pilha                      |stack_nbit       |    15|
+|7     |      \for_shifter[2].shifter  |shifter_74LS174  |    15|
+|8     |  somador                      |somador_reg      |     5|
++------+-------------------------------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 776.113 ; gain = 513.625
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 776.113 ; gain = 181.172
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 776.113 ; gain = 513.625
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 776.113 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+68 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 776.113 ; gain = 519.938
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 776.113 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Neris/finalproject/finalproject.runs/synth_1/top_module.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_module_utilization_synth.rpt -pb top_module_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jul  4 13:14:45 2019...
