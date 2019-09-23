@@ -17,14 +17,14 @@ end entity;
 
 architecture mux8 of mux8 is
     begin
-    Y <= '1' when (D(0) = '1' and S(0) = '0' and S(1) = '0' and S(2) = '0') else
-         '1' when (D(1) = '1' and S(0) = '1' and S(1) = '0' and S(2) = '0') else
-         '1' when (D(2) = '1' and S(0) = '0' and S(1) = '1' and S(2) = '0') else
-         '1' when (D(3) = '1' and S(0) = '1' and S(1) = '1' and S(2) = '0') else
-         '1' when (D(4) = '1' and S(0) = '0' and S(1) = '0' and S(2) = '1') else
-         '1' when (D(5) = '1' and S(0) = '1' and S(1) = '0' and S(2) = '1') else
-         '1' when (D(6) = '1' and S(0) = '1' and S(1) = '1' and S(2) = '0') else
-         '1' when (D(7) = '1' and S(0) = '1' and S(1) = '1' and S(2) = '1') else
+    Y <= D(0) when S = "000" else
+         D(1) when S = "001" else
+         D(2) when S = "010" else
+         D(3) when S = "011" else
+         D(4) when S = "100" else
+         D(5) when S = "101" else
+         D(6) when S = "110" else
+         D(7) when S = "111" else
          '0';
 
 

@@ -122,7 +122,7 @@ architecture top_module of top_module is
   signal input2 : std_logic_vector(3 downto 0);
   signal input3 : std_logic_vector(3 downto 0);
   signal notmoedaack : std_logic;
-  
+
 begin
 
   moeda : decoMoeda port map (COIN_IN => COIN_IN,

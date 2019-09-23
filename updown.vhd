@@ -28,11 +28,11 @@ begin
                 flip <= "00000000";
                 oof <= '0';
                 
-            elsif en = '0'  then
+            elsif en = '0' and ld = '0'  then
                 flip <= flip;
                 oof <= '0';
                 
-            elsif en = '1' and ld = '1' then
+            elsif  ld = '1' then
                 flip <= D;
                 oof <= '0';
                 
@@ -62,4 +62,3 @@ begin
 
 
 end architecture;
-
